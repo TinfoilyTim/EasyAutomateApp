@@ -1,0 +1,109 @@
+*{
+    background-color: rgb(28, 28, 28);
+    color: aliceblue;
+    font-family: sans-serif;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+  
+  /* background-color: #012852; */
+    gap: 10px;
+  
+}
+.tasks{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.task{
+
+    all: unset;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+  /* Dimensions & Geometry */
+    padding: 14px 40px;
+    border-radius: 18px;
+
+  /* Blue-to-Teal Horizontal Gradient */
+    background: linear-gradient(90deg, #024385 0%, #06667d 100%);
+
+  /* Metallic Double Border Effect */
+  /* 1. Light silver outer border */
+    border: 2px solid #b8c4ce; 
+  /* 2. Inner dark gap + subtle outer glow */
+    box-shadow: 
+        inset 0 0 0 1px #012852, /* Inner dark border separating gradient from silver outline */
+        0 4px 12px rgba(0, 0, 0, 0.6); /* Soft drop shadow beneath button */
+
+  /* Typography */
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+
+  /* Interaction */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.task:hover{
+   
+    filter: brightness(1.1);
+    border-color: #ffffff; /* Highlights silver border on hover */
+    transform: translateY(-1px);
+    box-shadow: 
+    inset 0 0 0 1px #012852,
+    0 6px 16px rgba(0, 0, 0, 0.7);
+}
+.task:active {
+    
+    transform: translateY(0);
+    filter: brightness(0.95);
+    box-shadow: 
+        inset 0 0 0 1px #012852,
+        0 2px 6px rgba(0, 0, 0, 0.5);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-color: #012852;
+    
+}
+.headerRight{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+.headerLeft{
+
+    display: flex;
+    justify-content: start;
+}
+.button{
+    all: unset;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle light outline */
+    color: #ffffff; /* Plus icon color */
+    font-size: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+#add{
+    font-size: 15px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
