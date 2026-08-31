@@ -5,10 +5,24 @@ import Servers from './components/Servers'
 import Settings from './components/Settings'
 import Add from './components/Add'
 import './style/Main.css'
+import { useQuery } from '@tanstack/react-query'
+
+
+const getTasks = async () => {
+   const response = await fetch("http://localhost:8000/") 
+   return await response.json()
+  }
 
 function App() {
  
-  const list = ['Media Download','Update & Reboot','VPN off']
+  const {data, isLoading} = useQuery({
+    queryKey: ['tasks'],
+    queryFn: getTasks,
+  })
+  if (isLoading) return <div>Loading</div>
+  const list = data.defs || []
+  console.log(data)
+  
   
   return(
   <>
@@ -32,6 +46,9 @@ function App() {
   
   </>
  )
+
+
 }
+ 
 
 export default App

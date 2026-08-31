@@ -1,1 +1,1 @@
-Learning react to create a mobile app for my EasyAutomateApi found over at https://github.com/TinfoilyTim/EasyAutomateApi
+Learning react to create a mobile app for my EasyAutomateApi found over at https://github.com/TinfoilyTim/EasyAutomateApinpm run dev
